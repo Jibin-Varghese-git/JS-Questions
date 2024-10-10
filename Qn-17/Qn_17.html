@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Question-17</title>
+	</head>
+	<body>
+		<form>
+		<label>Mark of  Maths</label><input type="text" id="maths">
+		<label>Mark of  Physics</label><input type="text" id="phy">
+		<label>Mark of  Chemistry</label><input type="text" id="chem">
+		<button type="button" onclick="myFun()">Submit</button><br><br>
+		<span   id="ans"></span>
+		</form>
+		<script>
+			function myFun()
+			{
+				var maths=parseInt(document.getElementById("maths").value);
+				var phy=parseInt(document.getElementById("phy").value);
+				var chem=parseInt(document.getElementById("chem").value);
+				let total=maths+phy+chem;
+				let mark_2_subs=maths+phy;
+				
+				
+				if(maths>=65 && phy>=55 && chem>=50 && total>=190 && mark_2_subs>=140 )
+				{
+					document.getElementById("ans").innerHTML="The student is eleigible "
+				}
+				else
+				{
+					document.getElementById("ans").innerHTML="The student is not eleigible "
+				}
+				
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Question-10</title>
+	</head>
+	<body>
+		<form>
+			<label>Enter the year</label><input type="text" id="yr">
+
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span   id="ans"></span>
+		</form>
+		<script>
+			function myFun()
+			{
+				var yr=parseInt(document.getElementById("yr").value);
+				
+				if(yr%4==0 && yr%100!=0)
+				{
+					document.getElementById("ans").innerHTML=yr+" is a leap year";
+				}
+				else if(yr%100==0 && yr%400==0)
+				{
+					document.getElementById("ans").innerHTML=yr+" is a leap year";
+				}
+				else
+				{
+					document.getElementById("ans").innerHTML=yr+" is not a leap year";
+				}
+			}
+		</script>
+	</body>
+
+</html>

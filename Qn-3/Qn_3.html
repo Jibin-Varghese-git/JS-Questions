@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Question-3</title>
+	</head>
+	<body>
+		<form>
+		<input type="text" id="num1">
+		<input type="text" id="num2">
+		<input type="text" id="num3">
+		<button type="button" onclick="myFun()">Submit</button><br><br>
+		<label>SUM</label><input type="text"  id="sum"><br><br>
+		<label>Average</label><input type="text"  id="avg">
+		</form>
+		<script>
+			function myFun()
+			{
+				var num1=document.getElementById("num1").value;
+				var num2=document.getElementById("num2").value;
+				var num3=document.getElementById("num3").value;
+				var sum=Number(num1)+Number(num2)+Number(num3);
+				document.getElementById("sum").value=sum;
+				document.getElementById("avg").value=sum/3;
+			}
+		</script>
+	</body>
+
+</html>

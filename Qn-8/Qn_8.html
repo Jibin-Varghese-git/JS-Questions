@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Question-8</title>
+	</head>
+	<body>
+		<form>
+		<input type="text" id="num">
+
+		<button type="button" onclick="myFun()">Submit</button><br><br>
+		<span   id="ans"></span>
+		</form>
+		<script>
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				
+				document.getElementById("ans").innerHTML="Cube of "+num+" is "+(num**3);
+			}
+		</script>
+	</body>
+
+</html>
