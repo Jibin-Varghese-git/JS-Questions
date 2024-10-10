@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Question-3</title>
+	</head>
+	<body>
+		<form>
+		<label>Enter the radius</label><input type="text" id="radius">
+		<button type="button" onclick="myFun()">Submit</button>
+		<label>Area of circle</label><input type="text"  id="avg">
+		
+		</form>
+		<script>
+			function myFun()
+			{
+				var r=document.getElementById("radius").value;
+				const pi=3.14;
+				document.getElementById("avg").value=pi*(parseFloat(r)**2);
+			}
+		</script>
+	</body>
+
+</html>

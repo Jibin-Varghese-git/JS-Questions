@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Question-2</title>
+	</head>
+	<body>
+		<form>
+			<input type="text" id="num1">
+			<input type="text" id="num2">
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<label>Sum</label><input type="text"  id="sum">
+			<label>Difference</label><input type="text"  id="sub">
+			<label>Multiply</label><input type="text"  id="mul">
+			<label>Division</label><input type="text"  id="div">
+		</form>
+		<script>
+			function myFun()
+			{
+				var num1=parseFloat(document.getElementById("num1").value);
+				var num2=parseFloat(document.getElementById("num2").value);
+				document.getElementById("sum").value=num1+num2;
+				document.getElementById("sub").value=num1-num2;
+				document.getElementById("mul").value=num1*num2;
+				document.getElementById("div").value=num1/num2;
+			}
+		</script>
+	</body>
+
+</html>

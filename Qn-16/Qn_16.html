@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Question-16</title>
+	</head>
+	<body>
+		<form>
+		<input type="text" id="num">
+		
+		<button type="button" onclick="myFun()">Submit</button><br><br>
+		<span   id="ans"></span>
+		</form>
+		<script>
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				var mid=num/2;
+				var count=0;
+				while(parseInt(mid)!=0)
+				{
+					if(num%parseInt(mid)==0)
+					{
+						count++;
+					}
+					mid--;
+				}
+				if(count>1)
+				{
+					document.getElementById("ans").innerHTML="The no is not a prime no";
+				}
+				else
+				{
+					document.getElementById("ans").innerHTML="The no is  a prime no";
+				}
+		
+			}
+		</script>
+	</body>
+
+</html>

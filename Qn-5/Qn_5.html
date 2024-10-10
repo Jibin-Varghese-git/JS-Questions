@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Question-5</title>
+	</head>
+	<body>
+		<form>
+		<label>Principle Amount</label><input type="text" id="p_amount">
+		<label>Rate of interest in percentage</label><input type="text" id="r_interest">
+		<label>No of Years</label><input type="text" id="years">
+		<button type="button" onclick="myFun()">Submit</button><br><br>
+		<label>Compound Interest</label><input type="text"  id="sim_int">
+		</form>
+		<script>
+			function myFun()
+			{
+				var p_amount=document.getElementById("p_amount").value;
+				var r_interest=document.getElementById("r_interest").value;
+				var years=document.getElementById("years").value;
+				var ir=(1+(parseFloat(r_interest)/100))**parseFloat(years);;
+				alert(ir);
+				var si=(parseFloat(p_amount)*ir)-parseFloat(p_amount);
+			
+				document.getElementById("sim_int").value=si;
+				
+			}
+		</script>
+	</body>
+
+</html>

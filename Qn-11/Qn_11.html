@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Question-11</title>
+	</head>
+	<body>
+		<form>
+			<label>Enter the nos</label><input type="text" id="num1">
+			<input type="text" id="num2">
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span  id="b_swap"></span><br>
+			<span  id="a_swap"></span>
+		</form>
+		<script>
+			function myFun()
+			{
+				var num1=parseInt(document.getElementById("num1").value);
+				var num2=parseInt(document.getElementById("num2").value);
+				document.getElementById("b_swap").innerHTML=" Before swap first no is "+ num1 + " Second no is " + num2;	
+				num1=num1+num2;
+				num2=num1-num2;
+				num1=num1-num2;
+				document.getElementById("a_swap").innerHTML=" After swap first no is " + num1 + " Second no is" + num2;
+			}
+		</script>
+	</body>
+
+</html>
