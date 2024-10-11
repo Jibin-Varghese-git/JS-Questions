@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Question-27</title>
+	</head>
+	<body>
+		<form>
+		<label>Enter the limit</label><input type="text" id="num"><br><br>
+		
+		<button type="button" onclick="myFun()">submit</button>
+		
+		</form>
+		<script>
+			
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				
+			
+				for(let i=num;i>0;i--)
+				{
+					document.write(i + " ");
+				}
+				
+			}
+			
+			
+		</script>
+	</body>
+
+</html>
