@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Question-57</title>
+	</head>
+	<body>
+		<form>
+			<h3>Middle Character</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				let mid=Number((str.length)/2)
+				alert(mid)
+				if(Number.isInteger(mid))
+				{
+					document.getElementById("res").innerHTML="Middle character of " + str + " is " + str[mid];
+				}
+				else
+				{
+               				document.getElementById("res").innerHTML="Middle is not an integer number";
+				}
+                
+			}
+		</script>
+	</body>
+
+</html>

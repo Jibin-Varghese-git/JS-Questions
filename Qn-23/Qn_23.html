@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Question-19</title>
+	</head>
+	<body>
+		<form>
+		<label>Enter the number</label><input type="text" id="num"><br><br>
+		
+		<button type="button" onclick="myFun()">submit</button>
+		
+		</form>
+		<script>
+			
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				let fact=1;
+				document.write("The factorial of "+num+" is ")
+				for(let i=num;i>0;i--)
+				{
+					fact=fact*i;	
+				}
+				document.write(fact);
+			}
+			
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Question-70</title>
+	</head>
+	<body>
+		<form>
+			<h3>Succeding char</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				
+				let answer="";
+				for(let i=0;i<str.length;i++)
+				{
+					let j=str.charCodeAt(i)+1;
+					
+               				answer=answer + String.fromCharCode(j);
+					
+				}
+				answer=answer.replace(",","");
+				document.getElementById("res").innerHTML=answer;
+                
+			}
+		</script>
+	</body>
+
+</html>

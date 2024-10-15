@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Question-2</title>
+	</head>
+	<body>
+		<form>
+		<input type="text" id="num">
+		
+		<button type="button" onclick="myFun()">Submit</button><br><br>
+		<span   id="ans"></span>
+		</form>
+		<script>
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				var day;
+				switch(num)
+				{
+					case 1:
+						day="Sunday";
+					break;
+					
+					case 2:
+						day="Monday";
+					break;
+
+					case 3:
+						day="Tuesday";
+					break;
+					
+					case 4:
+						day="Wednesday";
+					break;
+
+					case 5:
+						day="Thursday";
+					break;
+					
+					case 6:
+						day="Friday";
+					break;
+
+					case 7:
+						day="Saturday";
+					break;
+					
+					default:
+						day="Invalid";
+			
+				}
+
+				document.getElementById("ans").innerHTML="The day is "+day;
+			}
+		</script>
+	</body>
+
+</html>

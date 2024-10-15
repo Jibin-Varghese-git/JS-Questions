@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Question-62</title>
+	</head>
+	<body>
+		<form>
+			<h3>Substring prefix</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<label>Enter the  character</label><input type="text" id="sub_str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				var sub_str=document.getElementById("sub_str").value;
+				let flag=0;
+				for(let i=0;i<sub_str.length;i++)
+				{
+					if (sub_str[i]==str[i])
+					{
+						flag=1;
+					}
+					else
+					{
+						flag=0;
+						break;
+					}
+				}
+				
+				if(flag==1)
+				{
+					document.getElementById("res").innerHTML="The prefix of the string cotain the sub string"
+				}
+				else
+				{
+					document.getElementById("res").innerHTML="The substring is not present in the string prefix"
+				}
+                
+			}
+		</script>
+	</body>
+
+</html>

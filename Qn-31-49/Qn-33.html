@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Question-33</title>
+</head>
+<body>
+    <form>
+        <label>Enter a number:</label>
+        <input type="text" id="number">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <span id="ans"></span>
+    </form>
+    <script>
+        function myFun() 
+        {
+            var num = parseInt(document.getElementById("number").value);
+            let mid=parseInt(num/2)
+            let isPrime = true;
+            for (let i = 2; i <= mid; i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                document.getElementById("ans").innerHTML = num + " is a prime number.";
+            } else {
+                document.getElementById("ans").innerHTML = num + " is not a prime number.";
+            }
+        }
+    </script>
+</body>
+</html>

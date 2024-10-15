@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Question-25</title>
+	</head>
+	<body>
+		<form>
+		<label>Enter the number</label><input type="text" id="num"><br><br>
+		
+		<button type="button" onclick="myFun()">submit</button>
+		
+		</form>
+		<script>
+			
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				let mul;
+			
+				for(let i=1;i<=10;i++)
+				{
+					document.write(i + " x " + num + "=" + i*num +"<br>")
+				}
+				
+			}
+			
+			
+		</script>
+	</body>
+
+</html>

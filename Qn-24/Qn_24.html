@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Question-24</title>
+	</head>
+	<body>
+		<form>
+		<label>Enter the number</label><input type="text" id="num"><br><br>
+		
+		<button type="button" onclick="myFun()">submit</button>
+		
+		</form>
+		<script>
+			
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				let last=num%10;
+				
+				let first;
+				while(parseInt(num)!=0)
+				{
+					first=num;
+					
+					num=parseInt(num/10);
+					
+					
+				}
+				document.write("First digit is " + first + " and last digit is "+last);
+			}
+			
+			
+		</script>
+	</body>
+
+</html>

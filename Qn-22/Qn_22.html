@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Question-19</title>
+	</head>
+	<body>
+		<form>
+		<label>Enter the number</label><input type="text" id="num"><br><br>
+		
+		<button type="button" onclick="myFun()">submit</button>
+		
+		</form>
+		<script>
+			
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				let mid=parseInt(num/2);
+				document.write("The factors of "+num+" are <br>")
+				while(mid!=0)
+				{
+					if(num%mid==0)
+					{
+						document.write(parseInt(mid)+" ");
+					}
+					mid--;
+				}
+			}
+			
+			
+		</script>
+	</body>
+
+</html>

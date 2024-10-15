@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Question-58</title>
+	</head>
+	<body>
+		<form>
+			<h3>Characters in string</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+		
+				document.write("Characters in " + str + " are ");
+				for(let i=0;i<str.length;i++)
+				{
+               				document.write( str[i] + ",");
+				}
+                
+			}
+		</script>
+	</body>
+
+</html>

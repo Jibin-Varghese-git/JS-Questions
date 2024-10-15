@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Question-74</title>
+	</head>
+	<body>
+		<form>
+			<h3>Replace pallindrome</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				str+=" ";
+				let  splitArray=str.split(" ");
+				alert(splitArray[1].split('').reverse().join(''))
+				
+				for(let i=0;i<splitArray.length;i++)
+				{
+					if(splitArray[i] == splitArray[i].split('').reverse().join(''))
+					{
+						splitArray[i] =splitArray[i].replace(/[a-zA-Z ]/g, "*")
+					}
+				}
+
+				
+				for(let i=0;i<splitArray.length;i++)
+				{
+					document.write(splitArray[i] + " \t ")
+				}
+
+				
+			}
+		</script>
+	</body>
+
+</html>
