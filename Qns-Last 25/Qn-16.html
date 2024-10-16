@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Question-65</title>
+	</head>
+	<body>
+		<form>
+			<h3>Vowels reverse</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				const vowels=["a","e","i","o","u"];
+				let array2=[];
+				let vowelArray=[];
+				let temp,str2="";
+				for(let i=0;i<str.length;i++)
+				{
+					if(vowels.includes(str[i]))
+					{
+						vowelArray.push(str[i]);
+					}
+				}
+				for(let j=0;j<str.length;j++)
+				{
+					if(vowels.includes(str[j]))
+					{
+						temp=vowelArray.pop();
+						array2.push(temp)
+					}
+					else
+					{
+						array2.push(str[j])
+					}
+				}
+				for(let k in array2)
+				{
+					str2=str2+array2[k];
+				}
+				document.getElementById("res").innerHTML=str2;			
+			}
+		</script>
+	</body>
+
+</html>

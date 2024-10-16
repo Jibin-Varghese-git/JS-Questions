@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Sum of Even Numbers</title>
+</head>
+<body>
+    <form>
+        <label>Enter a  number:</label>
+        <input type="text" id="number">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <span id="ans"></span>
+    </form>
+    <script>
+        function myFun() {
+            var n = parseInt(document.getElementById("number").value)
+            let sum = 0;
+            for (let i = 2; i <= n; i += 2) 
+            {
+                sum += i;
+            }
+
+            document.getElementById("ans").innerHTML ="Sum of even numbers up to " + n + " is: " + sum;
+        }
+    </script>
+</body>
+</html>

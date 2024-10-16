@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Question-68</title>
+	</head>
+	<body>
+		<form>
+			<h3>Brackets check</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				let par=0,cur=0,sqr=0,flag=1;
+				for(let i=0;i<str.length;i++)
+				{
+					if(par < 0 || cur < 0 || sqr < 0)
+					{
+						let flag=0;
+					}
+					else
+					{
+						if(str[i] == "(")
+						{
+							par++;
+						}
+						
+						else if(str[i] == ")")
+						{
+							par--;
+						}
+			
+						else if(str[i] == "[")
+						{
+							sqr++;
+						}
+						
+						else if(str[i] == "]")
+						{
+							sqr--;
+						}
+		
+						 else if(str[i] == "{")
+						{
+							cur++;
+						}
+						
+						
+						else if(str[i] == "}")
+						{
+							cur--;
+						}
+					}			
+					
+				}
+				if(flag == 1)
+				{	
+					if(par==0 && cur==0 && sqr==0 )
+					{
+						document.getElementById("res").innerHTML="Is valid "
+					}
+					else
+					{
+						document.getElementById("res").innerHTML="Is not valid "
+					}
+				}	
+				else
+				{
+					document.getElementById("res").innerHTML="Is not valid. Close Brackets properly"
+				}	
+			}
+		</script>
+	</body>
+
+</html>

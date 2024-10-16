@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Question-30</title>
+	</head>
+	<body>
+		<form>
+			<h3>30 product of a number</h3>
+			<label>Enter the no</label><input type="text" id="num">
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span  id="res"></span><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var num=parseInt(document.getElementById("num").value);
+				let mul=1;
+				let temp=1;
+				while(num!=0)
+				{
+					
+					mul=mul*temp;
+					temp=parseInt(num)%10;
+				
+					num=parseInt(num)/10;
+			
+					document.getElementById("res").innerHTML=mul;
+				}
+			}
+		</script>
+	</body>
+
+</html>

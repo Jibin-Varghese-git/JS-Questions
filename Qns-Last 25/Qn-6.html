@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Question-55</title>
+	</head>
+	<body>
+		<form>
+			<h3>First Character</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+               			document.getElementById("res").innerHTML="First character of " + str + " is " + str[0];
+				
+                
+			}
+		</script>
+	</body>
+
+</html>

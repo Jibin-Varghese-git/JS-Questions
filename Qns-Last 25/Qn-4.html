@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Question-53</title>
+	</head>
+	<body>
+		<form>
+			<h3>Concatinate using method</h3>
+			<label>Enter the first string</label><input type="text" id="str1"><br>
+			<label>Enter the 2nd String</label><input type="text" id="str2">
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span  id="res"></span><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str1=document.getElementById("str1").value;
+				var str2=document.getElementById("str2").value;
+				let str3=str1.concat(str2);
+               			document.getElementById("res").innerHTML=str3;
+				
+                
+			}
+		</script>
+	</body>
+
+</html>

@@ -4,17 +4,18 @@
 	</head>
 	<body>
 		<form>
-		<input type="text" id="num1">
-		<input type="text" id="num2">
-		<button type="button" onclick="myFun()">Submit</button><br><br>
-		<span   id="ans">Answer will be here</span>
+			<h3>2 Programm to add two numbers.</h3>
+			<input type="text" id="num1">
+			<input type="text" id="num2">
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span   id="ans">Answer will be here</span>
 		</form>
 		<script>
 			function myFun()
 			{
 				var num1=parseInt(document.getElementById("num1").value);
 				var num2=parseInt(document.getElementById("num2").value);
-				document.write(num1+num2);
+				document.getElementById("ans").innerHTML=num1+num2;
 			}
 		</script>
 	</body>

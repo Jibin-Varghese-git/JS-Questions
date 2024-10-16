@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Question-69</title>
+	</head>
+	<body>
+		<form>
+			<h3>Largest and smallest word</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				const words=str.split(" ")
+				alert(words)
+				let small=words[0];
+				let large=words[0];		
+				for(let i=0;i<words.length;i++)
+				{
+					if(words[i].length < small.length)
+					{
+						small=words[i];					
+					}
+					
+					if(words[i].length > large.length)
+					{
+						large=words[i];	
+					}
+				}
+                		document.write("Largest is : " + large + "<br> Smallest is : " + small);
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Question-71</title>
+	</head>
+	<body>
+		<form>
+			<h3>Missing Letter</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				start=str.charCodeAt(0);
+				end=str.charCodeAt(str.length-1)
+				let j=0,flag=0;
+				
+				for(let i=start;i<=end;i++)
+				{
+					
+					if(str.charCodeAt(j) == i)
+					{
+						
+						j++;
+               				}
+					else
+					{
+						document.write(String.fromCharCode(i));
+						flag=1;
+					}
+					
+				}
+				if(flag==0)
+				{
+					document.write("No missing elements");
+				}
+			}
+		</script>
+	</body>
+
+</html>

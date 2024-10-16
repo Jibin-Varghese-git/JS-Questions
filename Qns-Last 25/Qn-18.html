@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Question-67</title>
+	</head>
+	<body>
+		<form>
+			<h3>Count of Vowels and Consonants</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				const vowels=["a","e","i","o","u"]
+				let consonant_count=0;
+				let vowel_count=0;
+				
+				for(let i=0;i<str.length;i++)
+				{
+					let flag=0;
+					for(let j=0;j<vowels.length;j++)
+					{
+						if(str[i]==vowels[j])
+						{
+							flag=1;	
+						}
+						
+					}
+					if(flag==1)
+					{
+						vowel_count++;	
+					}
+					else 
+					{
+						consonant_count++;
+					}
+				}
+                		document.write("Count of vowels is " + vowel_count + " consonant is " + consonant_count);
+			}
+		</script>
+	</body>
+
+</html>

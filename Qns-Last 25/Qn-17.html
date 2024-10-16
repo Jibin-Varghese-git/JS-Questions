@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Question-66</title>
+	</head>
+	<body>
+		<form>
+			<h3>Coun of chars</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				let a=0;
+				let d=0;
+				let s=0;
+				for(let i=0;i<str.length;i++)
+				{
+					if(/[a-bA-B]/.test(str[i]))
+					{
+						a++;	
+					}
+					else if(/[0-9]/.test(str[i]))
+					{
+						d++;
+					}
+					else 
+					{
+						s++;
+					}
+				}
+                		document.write("Count of alphabets is " + a + " digits is " + d +" special characters is " + s);
+			}
+		</script>
+	</body>
+
+</html>

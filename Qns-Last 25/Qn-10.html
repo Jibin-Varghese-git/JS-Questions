@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Question-59</title>
+	</head>
+	<body>
+		<form>
+			<h3>Length of string</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+		
+				document.write("Length of string using length funcion is " + str.length + "<br>");
+				let count=0;
+				while(str[count]!== undefined)
+				{
+					count++;
+					
+				}
+				document.write("Length without using length funcion is " + count);
+                
+			}
+		</script>
+	</body>
+
+</html>

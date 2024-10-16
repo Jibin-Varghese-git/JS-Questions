@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Question-52</title>
+	</head>
+	<body>
+		<form>
+			<h3>Charcode</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				alert(str)
+				for(let i=0;i<str.length;i++)
+				{
+               				document.write("Charcode of " + str[i] + " is " + str.charCodeAt(i) + "<br>");
+				}
+                
+			}
+		</script>
+	</body>
+
+</html>

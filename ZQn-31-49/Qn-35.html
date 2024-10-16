@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Question-35</title>
+</head>
+<body>
+    <form>
+	<h3>Notes Count</h3>
+        <label>Enter amount:</label>
+        <input type="text" id="amt">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <div id="ans"></div>
+    </form>
+    <script>
+        function myFun() 
+        {
+            	var amt = parseInt(document.getElementById("amt").value);
+           	const notes=[500,200,100,50,20,10,5,2,1];
+		let count=[];
+		let temp=amt;
+		for(let i=0;i<notes.length;i++)
+		{
+			count[i]=Math.floor(temp/ notes[i]);
+			temp=temp-(count[i] * notes[i])
+			
+		}
+		for(let i in notes)
+		{
+			document.getElementById("ans").innerHTML+=notes[i] + ":" + count[i] + "<br>";
+		}
+		
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Question-20</title>
+	</head>
+	<body>
+		<form>
+			<h3>20 Print 1 to 100 without using loop </h3>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span   id="ans"></span>
+		</form>
+		<script>
+
+			let count=1;
+			function myFun(t)
+			{			
+				if(count>100)
+				{
+					return 1;
+				}
+				else
+				{
+					document.write(count+" ");
+				
+					console.log(count);
+					count++;
+					myFun();
+					
+				}				
+				
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Question-52</title>
+	</head>
+	<body>
+		<form>
+			<h3>Charcode</h3>
+			<label>Enter the  byte value using commas</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				let intArray=str.split(",")
+				
+				let strArray=[];
+				for(let i=0;i<intArray.length;i++)
+				{
+               				strArray[i]=String.fromCharCode(intArray[i])
+				}
+				document.getElementById("res").innerHTML=strArray;
+                
+			}
+		</script>
+	</body>
+
+</html>

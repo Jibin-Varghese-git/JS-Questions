@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Question-60</title>
+	</head>
+	<body>
+		<form>
+			<h3>Characters in string</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<label>Enter the  character</label><input type="text" id="char"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				var char=document.getElementById("char").value;
+				let flag=0;
+				let i;
+				for(i=0;i<str.length;i++)
+				{
+               				if(str[i]==char)
+					{
+						flag=1;
+						break;
+					}
+				}
+
+				if(flag==1)
+				{
+					document.getElementById("res").innerHTML="Index of " + char + " is " + Number(i)+1;
+				}
+				else
+				{
+					document.getElementById("res").innerHTML="Character is not in the string";
+				}
+                
+			}
+		</script>
+	</body>
+
+</html>

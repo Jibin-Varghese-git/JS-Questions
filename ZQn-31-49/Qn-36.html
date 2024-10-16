@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Question-36</title>
+</head>
+<body>
+    <form>
+        <label>Enter the limit</label>
+        <input type="text" id="number">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <span id="ans"></span>
+    </form>
+    <script>
+        function myFun() 
+        {
+            var num = parseInt(document.getElementById("number").value);
+
+           for(let i=2;i<=num;i=i+2) 
+            {
+                document.write ( i +" ");
+            }
+        }
+    </script>
+</body>
+</html>

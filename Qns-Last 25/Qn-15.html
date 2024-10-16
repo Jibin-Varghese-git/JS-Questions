@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Question-64</title>
+	</head>
+	<body>
+		<form>
+			<h3>Upper_Lower</h3>
+			<label>Enter the  string</label><input type="text" id="str"><br>
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<p  id="res"></p><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				alert(str == str.toLowerCase())
+				document.write("(Before) " + str + "<br>" );
+			
+				if(str == str.toLowerCase())
+				{
+					str=str.toUpperCase();
+				}
+				else
+				{
+					str=str.toLowerCase();
+				}
+                		document.write("(After) " + str )
+			}
+		</script>
+	</body>
+
+</html>
