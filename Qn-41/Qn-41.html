@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Question-41</title>
+</head>
+<body>
+    <form>
+        <label>Enter the basic salary</label>
+        <input type="text" id="bs">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <span id="result"></span>
+    </form>
+    <script>
+        function myFun() 
+        {
+            var bs = parseInt(document.getElementById("bs").value);
+            let hra = 0 ,da=0 ,gross_sal=0;
+            
+
+            if (bs <= 10000) 
+            {
+                hra=bs * 0.008;
+                da=bs * 0.01;
+                gross_sal=bs + hra + da;
+            }
+             
+            else if (bs <= 20000)
+            {
+                hra=bs * 0.016;
+                da=bs * 0.02;
+                gross_sal=bs + hra + da;
+            }
+            else 
+            {
+                hra=bs * 0.024;
+                da=bs * 0.03;
+                gross_sal=bs + hra + da;
+            }
+
+            
+
+            document.getElementById("result").innerHTML = "Total Gross Pay: Rs. " + gross_sal.toFixed(2);
+        }
+    </script>
+</body>
+</html>

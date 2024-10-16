@@ -4,7 +4,7 @@
 	</head>
 	<body>
 		<form>
-			<h3>Sum of a number</h3>
+			<h3>13 Sum of a number</h3>
 			<label>Enter the no</label><input type="text" id="num">
 			<button type="button" onclick="myFun()">Submit</button><br><br>
 			<span  id="res"></span><br>
@@ -18,7 +18,7 @@
 				while(num!=0)
 				{
 					temp=parseInt(num)%10;
-					num=parseInt(num)/10;
+					num=Math.floor(num/10);
 				
 					sum=sum+temp;
 			

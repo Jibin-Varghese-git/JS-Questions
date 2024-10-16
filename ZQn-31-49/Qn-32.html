@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Perfect Number Checker</title>
+</head>
+<body>
+    <form>
+        <label>Enter a number:</label>
+        <input type="text" id="number">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <span id="ans"></span>
+    </form>
+    <script>
+        function myFun() 
+        {
+            var num = parseInt(document.getElementById("number").value);
+            
+
+            let sum = 0;
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+            }
+
+            if (sum === num) {
+                document.getElementById("ans").innerHTML = num + " is a perfect number.";
+            } else {
+                document.getElementById("ans").innerHTML = num + " is not a perfect number.";
+            }
+        }
+    </script>
+</body>
+</html>

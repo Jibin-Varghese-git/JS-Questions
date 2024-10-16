@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Question-38</title>
+</head>
+<body>
+    <form>
+        <label>Enter a natural number:</label>
+        <input type="text" id="number">
+        <button type="button" onclick="myFun()">Submit</button><br><br>
+        <span id="ans"></span>
+    </form>
+    <script>
+        function myFun() {
+            var n = parseInt(document.getElementById("number").value);
+            
+            if (n <= 0) 
+            {
+                document.getElementById("ans").innerHTML = "Please enter a number greater than 0";
+                return;
+            }
+
+            let sum = (n * (n + 1)) / 2;
+            let average = sum / n;
+
+            document.getElementById("ans").innerHTML = "Sum of first " + n + " natural numbers is: " + sum + "<br>" +
+                "Average of first " + n + " natural numbers is: " + average;
+        }
+    </script>
+</body>
+</html>

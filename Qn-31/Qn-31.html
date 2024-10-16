@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Question-31</title>
+	</head>
+	<body>
+		<form>
+			<h3>31 Palindrome String</h3>
+			<label>Enter the string</label><input type="text" id="str">
+			<button type="button" onclick="myFun()">Submit</button><br><br>
+			<span  id="res"></span><br>
+		</form>
+		<script>
+			function myFun()
+			{
+				var str=document.getElementById("str").value;
+				str=str.toLowerCase();
+				let l=str.length -1;
+
+				let rev="";
+				for(let i=l;i>=0;i--)
+				{
+					rev= rev + str[i];
+				}
+			
+				
+               			 if(str==rev)
+                		{
+					document.getElementById("res").innerHTML=str +" is  a palindrome";
+                		}
+                		else
+                		{
+					document.getElementById("res").innerHTML=str +" is not a palindrome";
+        		        }
+			}
+		</script>
+	</body>
+
+</html>

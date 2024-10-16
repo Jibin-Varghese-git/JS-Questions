@@ -13,52 +13,62 @@
 			function myFun()
 			{
 				var str=document.getElementById("str").value;
-				let par=0,cur=0,sqr=0;
+				let par=0,cur=0,sqr=0,flag=1;
 				for(let i=0;i<str.length;i++)
 				{
-					if(str[i] == "(")
+					if(par < 0 || cur < 0 || sqr < 0)
 					{
-						par++;
+						let flag=0;
 					}
-					
-					
-					if(str[i] == ")")
+					else
 					{
-						par--;
-					}
+						if(str[i] == "(")
+						{
+							par++;
+						}
+						
+						else if(str[i] == ")")
+						{
+							par--;
+						}
+			
+						else if(str[i] == "[")
+						{
+							sqr++;
+						}
+						
+						else if(str[i] == "]")
+						{
+							sqr--;
+						}
 		
-					if(str[i] == "[")
-					{
-						sqr++;
-					}
-					
-					
-					if(str[i] == "]")
-					{
-						sqr--;
-					}
-	
-					if(str[i] == "{")
-					{
-						cur++;
-					}
-					
-					
-					if(str[i] == "}")
-					{
-						cur--;
-					}
-					
+						 else if(str[i] == "{")
+						{
+							cur++;
+						}
+						
+						
+						else if(str[i] == "}")
+						{
+							cur--;
+						}
+					}			
 					
 				}
-					
-				if(par==0 && cur==0 && sqr==0 )
-				{
-					document.getElementById("res").innerHTML="Is valid "
-				}
+				if(flag == 1)
+				{	
+					if(par==0 && cur==0 && sqr==0 )
+					{
+						document.getElementById("res").innerHTML="Is valid "
+					}
+					else
+					{
+						document.getElementById("res").innerHTML="Is not valid "
+					}
+				}	
 				else
 				{
-					document.getElementById("res").innerHTML="Is not valid "
+					document.getElementById("res").innerHTML="Is not valid. Close Brackets properly"
 				}	
 			}
 		</script>
